@@ -1,111 +1,53 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8" />
-    <title>Meine Tipp-Webseite</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #333;
-            padding: 10px;
-        }
-        nav {
-            display: flex;
-            gap: 15px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        main {
-            padding: 20px;
-        }
-        section {
-            margin-bottom: 40px;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-            max-width: 400px;
-        }
-        label {
-            margin-top: 10px;
-        }
-        input, textarea {
-            padding: 8px;
-            margin-top: 5px;
-        }
-        button {
-            margin-top: 15px;
-            padding: 10px;
-            background-color: #333;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #555;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <title>Tippspiel</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Meine Tipp-Webseite</h1>
-        <nav>
-            <a href="#registrieren">Registrieren</a>
-            <a href="#tipps-uebersicht">Tippübersicht</a>
-            <a href="#gaestebuch">Gästebuch</a>
-            <a href="#tipps-abgeben">Tipps abgeben</a>
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#uebersicht">Übersicht</a></li>
+                <li><a href="#registrieren">Registrieren</a></li>
+                <li><a href="#tipps">Tipps abgeben</a></li>
+                <li><a href="#uebersicht-tipps">Tipp-Übersicht</a></li>
+                <li><a href="#gaestebuch">Gästebuch</a></li>
+            </ul>
         </nav>
-    </header>
-    <main>
-        <!-- Registrierung -->
-        <section id="registrieren">
-            <h2>Registrieren</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" />
+        <main class="content">
+            <section id="uebersicht">
+                <h2>Übersicht</h2>
+                <p>Hier kannst du als Spielleiter Infos eintragen.</p>
+            </section>
 
-                <label for="email">E-Mail:</label>
-                <input type="email" id="email" name="email" />
+            <section id="registrieren">
+                <h2>Registrieren</h2>
+                <form>
+                    <input type="text" placeholder="Name"><br>
+                    <input type="email" placeholder="E-Mail"><br>
+                    <input type="password" placeholder="Passwort"><br>
+                    <button>Registrieren</button>
+                </form>
+            </section>
 
-                <label for="passwort">Passwort:</label>
-                <input type="password" id="passwort" name="passwort" />
+            <section id="tipps">
+                <h2>Tipps abgeben</h2>
+                <!-- Hier kommen die Spiele rein -->
+            </section>
 
-                <button type="submit">Registrieren</button>
-            </form>
-        </section>
+            <section id="uebersicht-tipps">
+                <h2>Tipp-Übersicht</h2>
+                <!-- Tabelle mit Tipps der Spieler -->
+            </section>
 
-        <!-- Tippübersicht -->
-        <section id="tipps-uebersicht">
-            <h2>Tippübersicht</h2>
-            <p>Hier werden die Tipps angezeigt.</p>
-        </section>
-
-        <!-- Gästebuch -->
-        <section id="gaestebuch">
-            <h2>Gästebuch</h2>
-            <form>
-                <label for="gaestebuch-name">Name:</label>
-                <input type="text" id="gaestebuch-name" name="gaestebuch-name" />
-
-                <label for="nachricht">Nachricht:</label>
-                <textarea id="nachricht" name="nachricht"></textarea>
-
-                <button type="submit">Absenden</button>
-            </form>
-        </section>
-
-        <!-- Tipps abgeben -->
-        <section id="tipps-abgeben">
-            <h2>Tipps abgeben</h2>
-            <p>Bitte geben Sie Ihre Tipps für die drei Spiele ein. Jedes Spiel benötigt drei Tipps.</p>
-            <form>
-                <h3>Schalke-Hertha</h3>
-                <h4>Schalke-Nürnberg</h4>
-                <h5>Schalke-Uwe ist auch dabei</h5>
+            <section id="gaestebuch">
+                <h2>Gästebuch</h2>
+                <textarea placeholder="Deine Nachricht..."></textarea><br>
+                <button>Eintragen</button>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
