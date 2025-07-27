@@ -1,53 +1,28 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <title>Tippspiel</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <nav class="sidebar">
-            <ul>
-                <li><a href="#uebersicht">Übersicht</a></li>
-                <li><a href="#registrieren">Registrieren</a></li>
-                <li><a href="#tipps">Tipps abgeben</a></li>
-                <li><a href="#uebersicht-tipps">Tipp-Übersicht</a></li>
-                <li><a href="#gaestebuch">Gästebuch</a></li>
-            </ul>
-        </nav>
-        <main class="content">
-            <section id="uebersicht">
-                <h2>Übersicht</h2>
-                <p>Hier kannst du als Spielleiter Infos eintragen.</p>
-            </section>
-
-            <section id="registrieren">
-                <h2>Registrieren</h2>
-                <form>
-                    <input type="text" placeholder="Name"><br>
-                    <input type="email" placeholder="E-Mail"><br>
-                    <input type="password" placeholder="Passwort"><br>
-                    <button>Registrieren</button>
-                </form>
-            </section>
-
-            <section id="tipps">
-                <h2>Tipps abgeben</h2>
-                <!-- Hier kommen die Spiele rein -->
-            </section>
-
-            <section id="uebersicht-tipps">
-                <h2>Tipp-Übersicht</h2>
-                <!-- Tabelle mit Tipps der Spieler -->
-            </section>
-
-            <section id="gaestebuch">
-                <h2>Gästebuch</h2>
-                <textarea placeholder="Deine Nachricht..."></textarea><br>
-                <button>Eintragen</button>
-            </section>
-        </main>
-    </div>
-</body>
-</html>
+<section id="uebersicht-tipps">
+    <h2>Tipp-Übersicht</h2>
+    <table class="tipp-tabelle">
+        <thead>
+            <tr>
+                <th>Spieler</th>
+                <th>Schalke - Nürnberg</th>
+                <th>Karlsruhe - Magdeburg</th>
+                <th>Bielefeld - Kiel</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ela</td>
+                <td>2:1</td>
+                <td>0:0</td>
+                <td>1:0</td>
+            </tr>
+            <tr>
+                <td>Marvin</td>
+                <td>1:1</td>
+                <td>1:2</td>
+                <td>2:2</td>
+            </tr>
+            <!-- weitere Spieler analog -->
+        </tbody>
+    </table>
+</section>
