@@ -3,122 +3,102 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mein Tippspiel</title>
+    <title>Meine Tipp-Website</title>
     <style>
-        /* Grundlegendes Layout */
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
-            display: flex;
-        }
-
-        /* Seitenleiste */
-        nav {
-            width: 200px;
-            background-color: #2c3e50;
-            color: white;
-            height: 100vh;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        nav h2 {
-            margin-top: 0;
-            font-size: 1.5em;
-        }
-
-        nav ul {
-            list-style: none;
+            margin: 0;
             padding: 0;
         }
-
-        nav li {
-            margin: 15px 0;
+        /* Menüband-Stil */
+        nav {
+            background-color: #333;
+            overflow: hidden;
         }
-
         nav a {
-            color: white;
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
             text-decoration: none;
-            font-weight: bold;
         }
-
         nav a:hover {
-            text-decoration: underline;
+            background-color: #575757;
         }
-
-        /* Hauptinhalt */
-        main {
-            flex: 1;
+        /* Abschnitt-Stil */
+        section {
             padding: 20px;
         }
-
-        /* Überschrift im Hauptbereich */
-        h1 {
-            margin-top: 0;
-        }
-
-        /* Beispiel für den Tippspiel-Bereich */
-        .tippspiel {
-            background-color: #ecf0f1;
-            padding: 20px;
-            border-radius: 8px;
-        }
-
-        /* Formular für Tipps abgeben */
+        /* Formular-Stil */
         form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        label {
             margin-top: 10px;
         }
-
-        input[type="text"], select {
+        input[type="text"], input[type="email"], input[type="password"], textarea {
+            width: 100%;
             padding: 8px;
-            margin-top: 5px;
-            border: 1px solid #bdc3c7;
-            border-radius: 4px;
+            margin: 4px 0 10px 0;
+            box-sizing: border-box;
         }
-
         button {
-            margin-top: 15px;
-            padding: 10px;
-            background-color: #2980b9;
-            color: white;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
             border: none;
-            border-radius: 4px;
             cursor: pointer;
         }
-
         button:hover {
-            background-color: #3498db;
+            background-color: #555;
         }
-
-        /* Stil für die Bestätigungsnachricht */
-        #bestätigung {
-            margin-top: 15px;
-            color: green;
-            font-weight: bold;
+        /* Gästebuch-Einträge */
+        .guestbook-entry {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
         }
     </style>
 </head>
 <body>
-    <!-- Navigation auf der linken Seite -->
-    <nav>
-        <h2>Menü</h2>
-        <ul>
-            <li><a href="#tippsabgeben">Tipps abgeben</a></li>
-            <!-- Weitere Menüpunkte können hier ergänzt werden -->
-        </ul>
-    </nav>
 
-    <!-- Hauptinhalt -->
-    <main>
-        <h1>Willkommen zu meinem Tippspiel!</h1>
-        <p>Hier kannst du deine Tipps abgeben und dein Ergebnis verfolgen.</p>
+<!-- Menüband -->
+<nav>
+    <a href="#registrieren">Registrieren</a>
+    <a href="#tippuebersicht">Tippübersicht</a>
+    <a href="#gaestebuch">Gästebuch</a>
+</nav>
 
-        <!-- Tippspiel-Bereich -->
-        <div class="tippspiel" id="tippsabgeben">
-            <h2>Tipps abgeben</h2>
-            <form id="tippsForm
+<!-- Registrierungsbereich -->
+<section id="registrieren">
+    <h2>Registrieren</h2>
+    <form id="registerForm">
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" required /><br />
+
+        <label for="email">E-Mail:</label><br />
+        <input type="email" id="email" name="email" required /><br />
+
+        <label for="password">Passwort:</label><br />
+        <input type="password" id="password" name="password" required /><br />
+
+        <button type="submit">Registrieren</button>
+    </form>
+    <p id="registerMessage"></p>
+</section>
+
+<!-- Tippübersicht -->
+<section id="tippuebersicht">
+    <h2>Tippübersicht</h2>
+    <button onclick="zeigeTipps()">Tipps anzeigen</button>
+    <div id="tippsListe"></div>
+</section>
+
+<!-- Gästebuch -->
+<section id="gaestebuch">
+    <h2>Gästebuch</h2>
+    <form id="guestbookForm">
+        <label for="guestName">Name:</label><br />
+        <input type="text" id="guestName" name="guestName" required /><br />
+
+        <label for="message">Nachricht:</label><br />
+        <textarea id="message" name="message" rows="4" required></textarea><br />
+
+        <button type="submit">Ein
