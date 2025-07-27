@@ -94,6 +94,13 @@
         button:hover {
             background-color: #3498db;
         }
+
+        /* Stil für die Bestätigungsnachricht */
+        #bestätigung {
+            margin-top: 15px;
+            color: green;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -114,13 +121,4 @@
         <!-- Tippspiel-Bereich -->
         <div class="tippspiel" id="tippsabgeben">
             <h2>Tipps abgeben</h2>
-            <form>
-                <label for="spielername">Dein Name:</label>
-                <input type="text" id="spielername" name="spielername" placeholder="Gib deinen Namen ein" />
-
-                <label for="spiel">Spiel auswählen:</label>
-                <select id="spiel" name="spiel">
-                    <option value="Karlsruhe-Magdeburg">Spiel 1</option>
-                    <option value="Nürnberg-Kiel">Spiel 2</option>
-                    <option value="Schalke-Hertha">Spiel 3</option>
-                        <
+            <form id="tippsForm
