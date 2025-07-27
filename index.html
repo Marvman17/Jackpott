@@ -1,16 +1,125 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mein Tippspiel</title>
+    <style>
+        /* Grundlegendes Layout */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+        }
+
+        /* Seitenleiste */
+        nav {
+            width: 200px;
+            background-color: #2c3e50;
+            color: white;
+            height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        nav h2 {
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav li {
+            margin: 15px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hauptinhalt */
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        /* Überschrift im Hauptbereich */
+        h1 {
+            margin-top: 0;
+        }
+
+        /* Beispiel für den Tippspiel-Bereich */
+        .tippspiel {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        /* Formular für Tipps abgeben */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 10px;
+        }
+
+        input[type="text"], select {
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #3498db;
+        }
+    </style>
 </head>
 <body>
-    <h1>Willkommen zu meinem Tippspiel!</h1>
-    <p>Hier kannst du deine Tipps eingeben.</p>
-</body>
-</html>
-<form>
-  Spiel 1 Ergebnis: <input type="text" name="spiel1"><br>
-  Spiel 2 Ergebnis: <input type="text" name="spiel2"><br>
-  Spiel 3 Ergebnis: <input type="text" name="spiel3"><br>
-  <button type="submit">Tipps absenden</button>
-</form>
+    <!-- Navigation auf der linken Seite -->
+    <nav>
+        <h2>Menü</h2>
+        <ul>
+            <li><a href="#tippsabgeben">Tipps abgeben</a></li>
+            <!-- Weitere Menüpunkte können hier ergänzt werden -->
+        </ul>
+    </nav>
+
+    <!-- Hauptinhalt -->
+    <main>
+        <h1>Willkommen zu meinem Tippspiel!</h1>
+        <p>Hier kannst du deine Tipps abgeben und dein Ergebnis verfolgen.</p>
+
+        <!-- Tippspiel-Bereich -->
+        <div class="tippspiel" id="tippsabgeben">
+            <h2>Tipps abgeben</h2>
+            <form>
+                <label for="spielername">Dein Name:</label>
+                <input type="text" id="spielername" name="spielername" placeholder="Gib deinen Namen ein" />
+
+                <label for="spiel">Spiel auswählen:</label>
+                <select id="spiel" name="spiel">
+                    <option value="spiel1">Spiel 1</option>
+                    <option value="spiel2">Spiel 2</option>
+                    <
